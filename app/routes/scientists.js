@@ -10,8 +10,7 @@ export default class ScientistsRoute extends Route {
   fetchScientists() {
     console.log('this.API_HOST', this.API_HOST);
     try {
-      // return fetch(`${this.API_HOST}/api/scientists`, {
-      return fetch(`/api/scientists`, {
+      return fetch(`${this.API_HOST}/api/scientists`, {
         // method: 'GET',
         // headers: {
         //   'Content-Type': 'application/json',
