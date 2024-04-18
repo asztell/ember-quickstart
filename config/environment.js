@@ -20,7 +20,7 @@ module.exports = function (environment) {
       // when it is created
     },
   };
-
+  console.log('--- environment ---', environment);
   if (environment === 'development') {
     ENV.EmberENV.API_HOST = 'http://localhost:4000';
     // ENV.APP.LOG_RESOLVER = true;
