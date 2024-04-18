@@ -5,9 +5,16 @@ export default class ScientistsRoute extends Route {
   constructor() {
     super(...arguments);
     this.API_HOST =
-      getOwner(this).resolveRegistration('config:environment').APP.API_HOST;
+      // getOwner(this).resolveRegistration('config:environment').APP.API_HOST;
+      getOwner(this).resolveRegistration(
+        'config:environment',
+      ).EmberENV.API_HOST;
   }
   fetchScientists() {
+    console.log(
+      "getOwner(this).resolveRegistration('config:environment')",
+      getOwner(this).resolveRegistration('config:environment'),
+    );
     console.log('this.API_HOST', this.API_HOST);
     try {
       return fetch(`${this.API_HOST}/api/scientists`, {
