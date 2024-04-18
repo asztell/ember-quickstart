@@ -12,6 +12,7 @@ module.exports = function (environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
       },
+      API_HOST: 'http://localhost:4000',
     },
 
     APP: {
@@ -21,6 +22,7 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
+    ENV.EmberENV.API_HOST = 'http://localhost:4000';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -29,6 +31,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'test') {
+    ENV.EmberENV.API_HOST = 'http://localhost:4000';
     // Testem prefers this...
     ENV.locationType = 'none';
 
@@ -41,6 +44,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
+    ENV.EmberENV.API_HOST = 'https://singular-capybara-ee9a1c.netlify.app';
     // here you can enable a production-specific feature
   }
 
