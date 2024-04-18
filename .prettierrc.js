@@ -8,5 +8,11 @@ module.exports = {
         singleQuote: true,
       },
     },
+    {
+      files: ['.ember-cli'],
+      options: {
+        trailingComma: 'none',
+      },
+    },
   ],
 };
