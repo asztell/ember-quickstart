@@ -34,12 +34,12 @@ export default class ScientistsRoute extends Route {
     }
   }
   async model() {
-    // const scientists = await this.fetchScientists();
+    const scientists = await this.fetchScientists();
     console.log(
       "getOwner(this).resolveRegistration('config:environment')",
       getOwner(this).resolveRegistration('config:environment'),
     );
-    const scientists = ['Marie Curie', 'Mae Jemison', 'Albert Hofmann'];
+    // const scientists = ['Marie Curie', 'Mae Jemison', 'Albert Hofmann'];
     console.log(scientists);
     return scientists;
   }
