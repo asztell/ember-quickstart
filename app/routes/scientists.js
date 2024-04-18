@@ -10,9 +10,8 @@ export default class ScientistsRoute extends Route {
   fetchScientists() {
     console.log('this.API_HOST', this.API_HOST);
     try {
-      // TODO use https://singular-capybara-ee9a1c.netlify.app/scientists
-      // return fetch('http://localhost:4000/api/scientists', {
-      return fetch(`${this.API_HOST}/api/scientists`, {
+      // return fetch(`${this.API_HOST}/api/scientists`, {
+      return fetch(`/api/scientists`, {
         // method: 'GET',
         // headers: {
         //   'Content-Type': 'application/json',
