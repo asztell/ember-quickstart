@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'ember-quickstart',
     environment,
     rootURL: '/',
-    locationType: 'history',
+    locationType: 'hash',
     EmberENV: {
       EXTEND_PROTOTYPES: false,
       FEATURES: {
@@ -22,7 +22,6 @@ module.exports = function (environment) {
   };
   console.log('--- environment ---', environment);
   if (environment === 'development') {
-    ENV.EmberENV.API_HOST = 'http://localhost:4000';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -31,7 +30,6 @@ module.exports = function (environment) {
   }
 
   if (environment === 'test') {
-    ENV.EmberENV.API_HOST = 'http://localhost:4000';
     // Testem prefers this...
     ENV.locationType = 'none';
 
