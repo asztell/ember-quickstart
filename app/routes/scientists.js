@@ -1,16 +1,15 @@
 import Route from '@ember/routing/route';
-import Ember from 'ember';
+// import Ember from 'ember';
+import { getOwner } from '@ember/application';
 
 // const API_HOST = 'http://localhost:4000';
 export default class ScientistsRoute extends Route {
   constructor() {
     super(...arguments);
-    console.log('Ember', Ember);
+    // console.log('Ember', Ember);
     this.API_HOST =
       // Ember.ENV.EmberENV.API_HOST;
-      Ember.getOwner(this).resolveRegistration(
-        'config:environment',
-      ).APP.API_HOST;
+      getOwner(this).resolveRegistration('config:environment').APP.API_HOST;
   }
   fetchScientists() {
     console.log('this.API_HOST', this.API_HOST);
