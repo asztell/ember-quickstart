@@ -1,18 +1,11 @@
 import Route from '@ember/routing/route';
-import { getOwner } from '@ember/application';
+import ENV from 'ember-quickstart/config/environment';
 
 export default class ScientistsRoute extends Route {
-  constructor() {
-    super(...arguments);
-    this.API_HOST =
-      getOwner(this).resolveRegistration(
-        'config:environment',
-      ).EmberENV.API_HOST;
-  }
-
   async fetchScientists() {
+    const { API_HOST } = ENV.EmberENV;
     try {
-      return await fetch(`${this.API_HOST}/api/scientists`)
+      return await fetch(`${API_HOST}/api/scientists`)
         .then((response) => response.json())
         .then((data) => {
           return data;
